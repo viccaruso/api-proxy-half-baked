@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import PokemonList from './PokemonList';
+import Spinner from './Spinner';
 
 export default function PokemonSearch() {
   // you'll need to track your pokemon search results, the loading state, and one form field: name. For this form field, set a real initial values (like 'pikachu') so the form populates with a default value.
   const [arrOfPokemon, setArrOfPokemon] = useState([]);
+  // eslint-disable-next-line
   const [isLoading, setIsLoading] = useState(false);
   const [formName, setFormName] = useState('');
 
@@ -16,7 +18,6 @@ export default function PokemonSearch() {
     const response = await fetch(`/.netlify/functions/pokemon?name=${formName}`);
     // put the jsonified data in state and set the loading state to false
     const json = await response.json();
-    console.log('This is the value returned by fetch', json);
     setIsLoading(false);
 
     setArrOfPokemon(json.results);
@@ -36,8 +37,11 @@ export default function PokemonSearch() {
         <button>Get pokemon</button>
       </form>
       {/* Make a PokemonList component to import and use here. Use a ternary to display a loading spinner (make a <Spinner /> component for this) if the data is still loading. */}
-      <PokemonList pokemons={arrOfPokemon} />
-      
+      {
+        isLoading
+          ? <Spinner />
+          : <PokemonList pokemons={arrOfPokemon} />
+      }
     </section>
   );
 
