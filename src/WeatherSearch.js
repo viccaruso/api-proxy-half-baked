@@ -1,9 +1,11 @@
-import { useState } from 'react';
+  // eslint-disable-next-line
+  import { useState } from 'react';
 
 export default function WeatherSearch() {
       // you'll need to track your weather search results, the loading state, and a form field for location with a default value.
   
-  async function handleWeatherSubmit(e) {
+    // eslint-disable-next-line
+async function handleWeatherSubmit(e) {
     e.preventDefault();
       
         // set the loading state to true
