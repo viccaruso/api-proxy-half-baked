@@ -1,8 +1,10 @@
+  // eslint-disable-next-line
 import { useState } from 'react';
 
 export default function YelpSearch() {
     // you'll need to track your yelp search results, the loading state, and a form field for location with a default value.
 
+    // eslint-disable-next-line
   async function handleYelpSubmit(e) {
     e.preventDefault();
   

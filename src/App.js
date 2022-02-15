@@ -1,5 +1,7 @@
 import PokemonSearch from './PokemonSearch';
+// eslint-disable-next-line
 import YelpSearch from './YelpSearch';
+// eslint-disable-next-line
 import WeatherSearch from './WeatherSearch';
 import './App.css';
 
