@@ -11,7 +11,6 @@ export default function YelpSearch() {
   const [isLoading, setIsLoading] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
 
-  // eslint-disable-next-line
   async function handleYelpSubmit(e) {
     e.preventDefault();
 
