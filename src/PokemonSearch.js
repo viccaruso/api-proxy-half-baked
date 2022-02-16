@@ -21,7 +21,7 @@ export default function PokemonSearch() {
     setIsLoading(false);
 
     setArrOfPokemon(json.results);
-    // console.log('This is the value of arrOfPokemon', arrOfPokemon); //Why is this empty when json.results is an array?
+    //console.log('This is the value of arrOfPokemon', arrOfPokemon); //Why is this empty when response.json() was awaited?
   }
 
   return (
