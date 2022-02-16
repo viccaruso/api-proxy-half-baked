@@ -23,7 +23,6 @@ export default function YelpSearch() {
     const json = await response.json();
     setIsLoading(false);
     setSearchResults(json);
-    console.log(searchResults);
   }
 
   return (

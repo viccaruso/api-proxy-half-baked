@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 require('dotenv').config();
-
+// eslint-disable-next-line
 exports.handler = async (event, context) => {
   try {
     // grab the city, state, and country from the request's query parameters
@@ -21,6 +21,7 @@ exports.handler = async (event, context) => {
       body: JSON.stringify(json.businesses),
     };
   } catch (error) {
+    // eslint-disable-next-line
     console.log(error);
     return {
       statusCode: 500,
